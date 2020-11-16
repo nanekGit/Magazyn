@@ -14,8 +14,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fd24d6f8-8142-483c-930b-25837a45b122" name="Default Changelist" comment="Pierwszy commit">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/magazyn/database/DataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/magazyn/database/DataBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/magazyn/database/IDataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/magazyn/database/IDataBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/magazyn/gui/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/magazyn/gui/GUI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,13 +72,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -99,7 +103,8 @@
       <workItem from="1605183651392" duration="990000" />
       <workItem from="1605184795230" duration="2043000" />
       <workItem from="1605186949071" duration="1240000" />
-      <workItem from="1605188449521" duration="643000" />
+      <workItem from="1605188449521" duration="905000" />
+      <workItem from="1605564382050" duration="1739000" />
     </task>
     <task id="LOCAL-00001" summary="Pierwszy commit">
       <created>1605188843246</created>
@@ -108,7 +113,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605188843247</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Pierwszy commit">
+      <created>1605189203608</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1605189203608</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -124,6 +136,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Pierwszy commit" />
@@ -142,22 +155,22 @@
       <screen x="0" y="0" width="1600" height="1170" />
     </state>
     <state x="1123" y="305" key="#com.intellij.ide.util.MemberChooser/0.0.1600.1170@0.0.1600.1170" timestamp="1605187935045" />
-    <state width="1556" height="309" key="GridCell.Tab.0.bottom" timestamp="1605188190871">
+    <state width="1556" height="309" key="GridCell.Tab.0.bottom" timestamp="1605189422512">
       <screen x="0" y="0" width="1600" height="1170" />
     </state>
-    <state width="1556" height="309" key="GridCell.Tab.0.bottom/0.0.1600.1170@0.0.1600.1170" timestamp="1605188190871" />
-    <state width="1556" height="309" key="GridCell.Tab.0.center" timestamp="1605188190870">
+    <state width="1556" height="309" key="GridCell.Tab.0.bottom/0.0.1600.1170@0.0.1600.1170" timestamp="1605189422512" />
+    <state width="1556" height="309" key="GridCell.Tab.0.center" timestamp="1605189422512">
       <screen x="0" y="0" width="1600" height="1170" />
     </state>
-    <state width="1556" height="309" key="GridCell.Tab.0.center/0.0.1600.1170@0.0.1600.1170" timestamp="1605188190870" />
-    <state width="1556" height="309" key="GridCell.Tab.0.left" timestamp="1605188190870">
+    <state width="1556" height="309" key="GridCell.Tab.0.center/0.0.1600.1170@0.0.1600.1170" timestamp="1605189422512" />
+    <state width="1556" height="309" key="GridCell.Tab.0.left" timestamp="1605189422512">
       <screen x="0" y="0" width="1600" height="1170" />
     </state>
-    <state width="1556" height="309" key="GridCell.Tab.0.left/0.0.1600.1170@0.0.1600.1170" timestamp="1605188190870" />
-    <state width="1556" height="309" key="GridCell.Tab.0.right" timestamp="1605188190870">
+    <state width="1556" height="309" key="GridCell.Tab.0.left/0.0.1600.1170@0.0.1600.1170" timestamp="1605189422512" />
+    <state width="1556" height="309" key="GridCell.Tab.0.right" timestamp="1605189422512">
       <screen x="0" y="0" width="1600" height="1170" />
     </state>
-    <state width="1556" height="309" key="GridCell.Tab.0.right/0.0.1600.1170@0.0.1600.1170" timestamp="1605188190870" />
+    <state width="1556" height="309" key="GridCell.Tab.0.right/0.0.1600.1170@0.0.1600.1170" timestamp="1605189422512" />
     <state x="660" y="251" key="Maven.ArtifactSearchDialog" timestamp="1604670223778">
       <screen x="0" y="0" width="1600" height="1170" />
     </state>
@@ -166,10 +179,10 @@
       <screen x="0" y="0" width="1600" height="1170" />
     </state>
     <state x="301" y="216" key="SettingsEditor/0.0.1600.1170@0.0.1600.1170" timestamp="1605186483293" />
-    <state x="392" y="317" key="Vcs.Push.Dialog.v2" timestamp="1605188969492">
+    <state x="392" y="317" key="Vcs.Push.Dialog.v2" timestamp="1605189222319">
       <screen x="0" y="0" width="1600" height="1170" />
     </state>
-    <state x="392" y="317" key="Vcs.Push.Dialog.v2/0.0.1600.1170@0.0.1600.1170" timestamp="1605188969492" />
+    <state x="392" y="317" key="Vcs.Push.Dialog.v2/0.0.1600.1170@0.0.1600.1170" timestamp="1605189222319" />
     <state x="601" y="490" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1605188642922">
       <screen x="0" y="0" width="1600" height="1170" />
     </state>

@@ -8,7 +8,7 @@ import java.util.List;
 
 @Component
 public class DataBase implements IDataBase {
-    private final List<Product> products = new ArrayList<>();
+    private  List<Product> products = new ArrayList<>();
 
     public DataBase(){
         this.products.add(new Product("Produkt 1",11,111));
@@ -22,5 +22,14 @@ public class DataBase implements IDataBase {
         return this.products;
     }
 
+    @Override
+    public void addProduct(Product exemplar) {
+        this.products.add(exemplar);
+    }
+/*
+    @Override
+    public void resupplyProduct(Product exemplar, int quantity){
+
+    }*/
 
 }

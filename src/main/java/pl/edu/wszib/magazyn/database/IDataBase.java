@@ -6,4 +6,6 @@ import java.util.List;
 
 public interface IDataBase {
     List<Product> getAllProducts();
+    void addProduct(Product exemplar);
+    //void resupplyProduct(Product exemplar, int quantity);
 }
