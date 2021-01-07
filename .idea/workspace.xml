@@ -108,15 +108,6 @@
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Confirmation" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\User\IdeaProjects\Magazyn\src\main\resources\static" />
-      <recent name="C:\Users\User\IdeaProjects\Magazyn\src\main\resources\templates" />
-      <recent name="C:\Users\User\IdeaProjects\Magazyn\src\main\resources" />
-      <recent name="C:\Users\User\IdeaProjects\Magazyn\src\main\java\pl\edu\wszib\magazyn" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\User\IdeaProjects\Magazyn\src\main\resources\static" />
-    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="pl.edu.wszib.magazyn.model.view" />
       <recent name="pl.edu.wszib.magazyn.model" />
