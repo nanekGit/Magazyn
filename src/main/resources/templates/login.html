@@ -12,7 +12,7 @@
 <div th:replace="fragments.html :: logo"></div>
 <div th:replace="fragments.html :: menu"></div>
 
-<form id="login-form" method="post"> <!--jak wysłać na inny adres to dodać: action="/login"-->
+<form id="login-form" method="post">
     <input type="text" placeholder="Login" th:field="*{userModel.login}">
     <input type="password" placeholder="Hasło" th:field="*{userModel.pass}">
     <input type="submit" value="Zaloguj">

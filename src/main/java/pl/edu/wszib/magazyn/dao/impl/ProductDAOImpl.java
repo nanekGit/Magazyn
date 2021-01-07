@@ -19,19 +19,19 @@ public class ProductDAOImpl implements iProductDAO {
 
     @Override
     public List<Product> getAllProducts() {
-        List<Product> books = new ArrayList<>();
+        List<Product> products = new ArrayList<>();
         try{
             String sql = "SELECT * FROM product;";
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
 
             ResultSet resultSet = preparedStatement.executeQuery();
             while(resultSet.next()){
-                books.add(new Product(resultSet));
+                products.add(new Product(resultSet));
             }
         }catch (Exception e){
             e.printStackTrace();
         }
-        return books;
+        return products;
     }
 
     @Override
