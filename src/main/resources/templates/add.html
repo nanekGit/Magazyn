@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Dodawanie Produktu</title>
+    <link rel="stylesheet" href="/add.css">
+    <link rel="stylesheet" href="/error.css">
+    <link rel="stylesheet" href="/commons.css">
+    <link rel="stylesheet" href="/commonsForm.css">
+    <script src="/productValidator.js"></script>
+</head>
+<body>
+
+<div th:replace="fragments.html :: logo"></div>
+<div th:replace="fragments.html :: menu"></div>
+
+<p class="error" id="name-err"></p>
+<p class="error" id="quantity-err"></p>
+
+<form id="register-form" method="post" onsubmit="return quantityAndNameValidate()">
+    <p th:if="${info}" th:text="${info}" class="error"></p>
+    <input id="name" type="text" placeholder="Nazwa" th:field="*{productModel.name}">
+    <input id="quantity" type="number" placeholder="Ilość Sztuk" th:field="*{productModel.quantity}">
+    <input type="submit" value="Dodaj Produkt">
+</form>
+
+</body>
+</html>

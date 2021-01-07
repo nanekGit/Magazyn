@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Logowanie</title>
+    <link rel="stylesheet" href="/login.css">
+    <link rel="stylesheet" href="/commons.css">
+    <link rel="stylesheet" href="/commonsForm.css">
+</head>
+<body>
+
+<div th:replace="fragments.html :: logo"></div>
+<div th:replace="fragments.html :: menu"></div>
+
+<form id="login-form" method="post"> <!--jak wysłać na inny adres to dodać: action="/login"-->
+    <input type="text" placeholder="Login" th:field="*{userModel.login}">
+    <input type="password" placeholder="Hasło" th:field="*{userModel.pass}">
+    <input type="submit" value="Zaloguj">
+    <a href="/register" id="register-link" th:if="${!isLogged}">Zarejestruj</a>
+</form>
+
+</body>
+</html>

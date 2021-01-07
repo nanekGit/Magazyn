@@ -13,11 +13,63 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fd24d6f8-8142-483c-930b-25837a45b122" name="Default Changelist" comment="Pierwszy commit">
+    <list default="true" id="fd24d6f8-8142-483c-930b-25837a45b122" name="Default Changelist" comment="Zadanie 2&#10;Front End i MYSQL">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/magazyn/controllers/AdminController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/magazyn/controllers/CommonController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/magazyn/controllers/ResupplierController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/magazyn/controllers/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/magazyn/dao/iProductDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/magazyn/dao/iUserDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/magazyn/dao/impl/ProductDAOImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/magazyn/dao/impl/UserDAOImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/magazyn/model/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/magazyn/model/view/ProductModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/magazyn/model/view/RegistrationModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/magazyn/services/iProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/magazyn/services/iUserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/magazyn/services/impl/ProductServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/magazyn/services/impl/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/magazyn/session/SessionObject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/add.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/commons.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/commonsForm.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/contact.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/edit.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/edit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/error.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/login.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/productValidator.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/register.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/registerValidator.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resupply.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resupply.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/add.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/contact.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/main.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/register.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/resupply.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/magazyn/database/DataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/magazyn/database/DataBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/magazyn/database/IDataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/magazyn/database/IDataBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/magazyn/gui/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/magazyn/gui/GUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/magazyn/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/magazyn/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/magazyn/AppConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/magazyn/configuration/AppConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/magazyn/database/DataBase.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/magazyn/database/IDataBase.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/magazyn/gui/GUI.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/magazyn/gui/IGUI.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/magazyn/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/magazyn/model/Product.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,36 +87,49 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="mavenHome" value="D:\IntelliJ IDEA\plugins\maven\lib\maven3" />
-      </MavenGeneralSettings>
-    </option>
-  </component>
   <component name="ProjectId" id="1jv1hmR84tEslwSDP102tMVBWvQ" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/static" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Confirmation" />
   </component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\User\IdeaProjects\Magazyn\src\main\resources\static" />
+      <recent name="C:\Users\User\IdeaProjects\Magazyn\src\main\resources\templates" />
+      <recent name="C:\Users\User\IdeaProjects\Magazyn\src\main\resources" />
+      <recent name="C:\Users\User\IdeaProjects\Magazyn\src\main\java\pl\edu\wszib\magazyn" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\User\IdeaProjects\Magazyn\src\main\resources\static" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="pl.edu.wszib.magazyn.model.view" />
+      <recent name="pl.edu.wszib.magazyn.model" />
+      <recent name="pl.edu.wszib.magazyn.controllers" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.App">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="pl.edu.wszib.magazyn.App" />
       <module name="Magazyn" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="pl.edu.wszib.magazyn.*" />
+          <option name="PATTERN" value="pl.edu.wszib.magazyn.configuration.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -72,15 +137,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="App" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="Magazyn" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="pl.edu.wszib.magazyn.App" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -104,7 +174,19 @@
       <workItem from="1605184795230" duration="2043000" />
       <workItem from="1605186949071" duration="1240000" />
       <workItem from="1605188449521" duration="905000" />
-      <workItem from="1605564382050" duration="1739000" />
+      <workItem from="1605564382050" duration="2071000" />
+      <workItem from="1605566699245" duration="610000" />
+      <workItem from="1605864264704" duration="291000" />
+      <workItem from="1605864723930" duration="121000" />
+      <workItem from="1605867014575" duration="181000" />
+      <workItem from="1605868398725" duration="3000" />
+      <workItem from="1605879603942" duration="18000" />
+      <workItem from="1607696945866" duration="511000" />
+      <workItem from="1607700593654" duration="133000" />
+      <workItem from="1607702100639" duration="666000" />
+      <workItem from="1609937799867" duration="4922000" />
+      <workItem from="1609943252364" duration="5642000" />
+      <workItem from="1610015137724" duration="8944000" />
     </task>
     <task id="LOCAL-00001" summary="Pierwszy commit">
       <created>1605188843246</created>
@@ -120,7 +202,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605189203608</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Drugi commint">
+      <created>1605566448803</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1605566448803</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -140,52 +229,12 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Pierwszy commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Pierwszy commit" />
+    <MESSAGE value="Drugi commint" />
+    <MESSAGE value="Zadanie 2&#10;Front End i MYSQL" />
+    <option name="LAST_COMMIT_MESSAGE" value="Zadanie 2&#10;Front End i MYSQL" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="952" y="408" key="#Notifications" timestamp="1605185078512">
-      <screen x="0" y="0" width="1600" height="1170" />
-    </state>
-    <state x="952" y="408" key="#Notifications/0.0.1600.1170@0.0.1600.1170" timestamp="1605185078512" />
-    <state x="560" y="170" key="#Project_Structure" timestamp="1605187059252">
-      <screen x="0" y="0" width="1600" height="1170" />
-    </state>
-    <state x="560" y="170" key="#Project_Structure/0.0.1600.1170@0.0.1600.1170" timestamp="1605187059252" />
-    <state x="1123" y="305" key="#com.intellij.ide.util.MemberChooser" timestamp="1605187935045">
-      <screen x="0" y="0" width="1600" height="1170" />
-    </state>
-    <state x="1123" y="305" key="#com.intellij.ide.util.MemberChooser/0.0.1600.1170@0.0.1600.1170" timestamp="1605187935045" />
-    <state width="1556" height="309" key="GridCell.Tab.0.bottom" timestamp="1605189422512">
-      <screen x="0" y="0" width="1600" height="1170" />
-    </state>
-    <state width="1556" height="309" key="GridCell.Tab.0.bottom/0.0.1600.1170@0.0.1600.1170" timestamp="1605189422512" />
-    <state width="1556" height="309" key="GridCell.Tab.0.center" timestamp="1605189422512">
-      <screen x="0" y="0" width="1600" height="1170" />
-    </state>
-    <state width="1556" height="309" key="GridCell.Tab.0.center/0.0.1600.1170@0.0.1600.1170" timestamp="1605189422512" />
-    <state width="1556" height="309" key="GridCell.Tab.0.left" timestamp="1605189422512">
-      <screen x="0" y="0" width="1600" height="1170" />
-    </state>
-    <state width="1556" height="309" key="GridCell.Tab.0.left/0.0.1600.1170@0.0.1600.1170" timestamp="1605189422512" />
-    <state width="1556" height="309" key="GridCell.Tab.0.right" timestamp="1605189422512">
-      <screen x="0" y="0" width="1600" height="1170" />
-    </state>
-    <state width="1556" height="309" key="GridCell.Tab.0.right/0.0.1600.1170@0.0.1600.1170" timestamp="1605189422512" />
-    <state x="660" y="251" key="Maven.ArtifactSearchDialog" timestamp="1604670223778">
-      <screen x="0" y="0" width="1600" height="1170" />
-    </state>
-    <state x="660" y="251" key="Maven.ArtifactSearchDialog/0.0.1600.1170@0.0.1600.1170" timestamp="1604670223778" />
-    <state x="301" y="216" key="SettingsEditor" timestamp="1605186483293">
-      <screen x="0" y="0" width="1600" height="1170" />
-    </state>
-    <state x="301" y="216" key="SettingsEditor/0.0.1600.1170@0.0.1600.1170" timestamp="1605186483293" />
-    <state x="392" y="317" key="Vcs.Push.Dialog.v2" timestamp="1605189222319">
-      <screen x="0" y="0" width="1600" height="1170" />
-    </state>
-    <state x="392" y="317" key="Vcs.Push.Dialog.v2/0.0.1600.1170@0.0.1600.1170" timestamp="1605189222319" />
-    <state x="601" y="490" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1605188642922">
-      <screen x="0" y="0" width="1600" height="1170" />
-    </state>
-    <state x="601" y="490" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1600.1170@0.0.1600.1170" timestamp="1605188642922" />
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
