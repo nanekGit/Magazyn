@@ -5,11 +5,11 @@ function quantityValidate(){
 
     if(quantity===''){
         document.getElementById("quantity").style.backgroundColor = "red";
-        document.getElementById("quantity-err").innerHTML = "Pole Ilość sztuk nie może być puste";
+        document.getElementById("quantity-err").innerHTML = "Pole Ilość Sztuk nie może być puste";
         flag = false;
     } else if(quantity<0){
         document.getElementById("quantity").style.backgroundColor = "red";
-        document.getElementById("quantity-err").innerHTML = "Ilość sztuk nie może być liczbą ujemną";
+        document.getElementById("quantity-err").innerHTML = "Ilość Sztuk nie może być liczbą ujemną";
         flag = false;
     }else{
         document.getElementById("quantity").style.backgroundColor = "white";
@@ -38,11 +38,11 @@ function quantityAndNameValidate(){
 
     if(quantity===''){
         document.getElementById("quantity").style.backgroundColor = "red";
-        document.getElementById("quantity-err").innerHTML = "Pole Ilość sztuk nie może być puste";
+        document.getElementById("quantity-err").innerHTML = "Pole Ilość Sztuk nie może być puste";
         flag = false;
     } else if(quantity<0){
         document.getElementById("quantity").style.backgroundColor = "red";
-        document.getElementById("quantity-err").innerHTML = "Ilość sztuk nie może być liczbą ujemną";
+        document.getElementById("quantity-err").innerHTML = "Ilość Sztuk nie może być liczbą ujemną";
         flag = false;
     }else{
         document.getElementById("quantity").style.backgroundColor = "white";

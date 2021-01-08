@@ -63,10 +63,18 @@ public class AdminController {
             return "redirect:http://localhost:8080/edit/"+id;
         }
         if(product.getQuantity()<0){
-            this.sessionObject.setInfo("Ilość Sztuk nie może być ujemna. Wpisałeś "+product.getQuantity());
+            this.sessionObject.setInfo("Ilość Sztuk nie może być ujemna.\nWpisałeś "+product.getQuantity());
             return "redirect:http://localhost:8080/edit/"+id;
         }
-        this.productService.editProduct(product);
+        int error=this.productService.editProduct(product);
+        if(error==1){
+            this.sessionObject.setInfo("Produkt o takiej nazwie już znajduje się w bazie danych.\nNazwa którą podałeś: "+product.getName());
+            return "redirect:http://localhost:8080/edit/"+id;
+        }
+        if(error==2){
+            this.sessionObject.setInfo("Wystąpił błąd podczas aktualizacji bazy danych");
+            return "redirect:http://localhost:8080/edit/"+id;
+        }
         return "redirect:/main";
     }
 
@@ -105,7 +113,7 @@ public class AdminController {
             return "redirect:http://localhost:8080/add";
         }
         if(!this.productService.addProduct(productModel)){
-            this.sessionObject.setInfo("Taki produkt już jest w systemie.");
+            this.sessionObject.setInfo("Produkt o takiej nazwie już znajduje się w bazie danych. Nazwa którą podałeś: "+productModel.getName());
             return "redirect:http://localhost:8080/add";
         }
         return "redirect:/main";

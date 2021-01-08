@@ -86,23 +86,24 @@ public class ProductDAOImpl implements iProductDAO {
     }
 
     @Override
-    public void resupplyProduct(Product product) {
+    public boolean resupplyProduct(Product product) {
         try{
             String sql = "UPDATE product SET quantity = ? WHERE id = ?;";
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setInt(1, product.getQuantity());
             preparedStatement.setInt(2, product.getID());
 
-            if(preparedStatement.executeUpdate()==0){
-                System.out.println("Something went wrong with:\nProductDAOImpl.resupplyProduct(Product product)");
+            if(preparedStatement.executeUpdate()>0){
+                return true;
             }
         }catch (Exception e){
             e.printStackTrace();
         }
+        return false;
     }
 
     @Override
-    public void editProduct(Product product) {
+    public boolean editProduct(Product product) {
         try{
             String sql = "UPDATE product SET quantity = ?, name = ? WHERE id = ?;";
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
@@ -110,11 +111,12 @@ public class ProductDAOImpl implements iProductDAO {
             preparedStatement.setString(2, product.getName());
             preparedStatement.setInt(3, product.getID());
 
-            if(preparedStatement.executeUpdate()==0){
-                System.out.println("Something went wrong with:\nProductDAOImpl.editProduct(Product product)");
+            if(preparedStatement.executeUpdate()>0){
+                return true;
             }
         }catch (Exception e){
             e.printStackTrace();
         }
+        return false;
     }
 }

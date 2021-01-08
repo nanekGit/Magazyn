@@ -9,7 +9,7 @@ public interface iProductService {
 
     List<Product> getAllProducts();
     Product getProductByID(int id);
-    void resupplyProduct(Product product);
-    void editProduct(Product product);
+    boolean resupplyProduct(Product product);
+    int editProduct(Product product);
     boolean addProduct(ProductModel productModel);
 }
