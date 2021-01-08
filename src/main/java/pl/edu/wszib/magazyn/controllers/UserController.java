@@ -32,6 +32,7 @@ public class UserController {
         model.addAttribute("userModel", new User());
         model.addAttribute("isLogged", this.sessionObject.isLogged());
         model.addAttribute("role", null);
+        model.addAttribute("info", this.sessionObject.getInfo());
         return "login";
     }
 
@@ -39,6 +40,7 @@ public class UserController {
     public String loginSubmit(@ModelAttribute User user){
         this.userService.authenticate(user);
         if(!this.sessionObject.isLogged()){
+            this.sessionObject.setInfo("Błędny login lub hasło.");
             return "redirect:http://localhost:8080/login";
         }
         return "redirect:/main";
@@ -77,11 +79,11 @@ public class UserController {
                 !passMatcher.matches() ||
                 !pass2Matcher.matches())
         {
-            this.sessionObject.setInfo("Błąd Validacji");
+            this.sessionObject.setInfo("Błąd Validacji.");
             return "redirect:http://localhost:8080/register";
         }
         if(!this.userService.register(registrationModel)){
-            this.sessionObject.setInfo("Login Zajęty");
+            this.sessionObject.setInfo("Login Zajęty.");
             return "redirect:http://localhost:8080/register";
         }
         return "redirect:http://localhost:8080/login";

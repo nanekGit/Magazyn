@@ -3,7 +3,6 @@ function registerValidate(){
     var pass = document.forms["register-form"]["pass"].value;
     var pass2 = document.forms["register-form"]["pass2"].value;
 
-    //Minimum 5 znaków z zakresów A-Z a-z 0-9, a potem byle co
     var regex = new RegExp(/[A-Za-z0-9._-]{5}.*/);
     var flag = true;
 
@@ -49,6 +48,37 @@ function registerValidate(){
         document.getElementById("equal-err").innerHTML = "";
     }else{
         document.getElementById("equal-err").innerHTML = "";
+    }
+
+
+    return flag;
+}
+
+function loginValidate(){
+    var login = document.forms["login-form"]["login"].value;
+    var pass = document.forms["login-form"]["pass"].value;
+
+    var regex = new RegExp(/[A-Za-z0-9._-]{5}.*/);
+    var flag = true;
+
+
+    if(!regex.test(login)){
+        document.getElementById("login").style.backgroundColor = "red";
+        document.getElementById("login-err").innerHTML = "Login musi być długości 5 lub więcej.";
+        flag = false;
+    }else{
+        document.getElementById("login").style.backgroundColor = "white";
+        document.getElementById("login-err").innerHTML = "";
+    }
+
+
+    if(!regex.test(pass)){
+        document.getElementById("pass").style.backgroundColor = "red";
+        document.getElementById("pass-err").innerHTML = "Hasło musi być długości 5 lub więcej.";
+        flag = false;
+    }else{
+        document.getElementById("pass").style.backgroundColor = "white";
+        document.getElementById("pass-err").innerHTML = "";
     }
 
 

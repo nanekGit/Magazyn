@@ -1,27 +1,25 @@
 function quantityValidate(){
-    var quantity = document.forms["register-form"]["quantity"].value;
+    var quantity = document.forms["product-form"]["quantity"].value;
 
-    var flag = true;
 
     if(quantity===''){
         document.getElementById("quantity").style.backgroundColor = "red";
         document.getElementById("quantity-err").innerHTML = "Pole Ilość Sztuk nie może być puste";
-        flag = false;
-    } else if(quantity<0){
+        return false;
+    }else if(quantity<0){
         document.getElementById("quantity").style.backgroundColor = "red";
         document.getElementById("quantity-err").innerHTML = "Ilość Sztuk nie może być liczbą ujemną";
-        flag = false;
+        return false;
     }else{
         document.getElementById("quantity").style.backgroundColor = "white";
         document.getElementById("quantity-err").innerHTML = "";
+        return true;
     }
-
-    return flag;
 }
 
 function quantityAndNameValidate(){
-    var quantity = document.forms["register-form"]["quantity"].value;
-    var name = document.forms["register-form"]["name"].value;
+    var quantity = document.forms["product-form"]["quantity"].value;
+    var name = document.forms["product-form"]["name"].value;
 
     var regex = new RegExp(/[\sA-Za-z0-9._-]{5}.*/);
     var flag = true;
@@ -40,7 +38,7 @@ function quantityAndNameValidate(){
         document.getElementById("quantity").style.backgroundColor = "red";
         document.getElementById("quantity-err").innerHTML = "Pole Ilość Sztuk nie może być puste";
         flag = false;
-    } else if(quantity<0){
+    }else if(quantity<0){
         document.getElementById("quantity").style.backgroundColor = "red";
         document.getElementById("quantity-err").innerHTML = "Ilość Sztuk nie może być liczbą ujemną";
         flag = false;
@@ -48,6 +46,7 @@ function quantityAndNameValidate(){
         document.getElementById("quantity").style.backgroundColor = "white";
         document.getElementById("quantity-err").innerHTML = "";
     }
+
 
     return flag;
 }

@@ -6,13 +6,18 @@
     <link rel="stylesheet" href="/login.css">
     <link rel="stylesheet" href="/commons.css">
     <link rel="stylesheet" href="/commonsForm.css">
+    <script src="/userValidator.js"></script>
 </head>
 <body>
 
 <div th:replace="fragments.html :: logo"></div>
 <div th:replace="fragments.html :: menu"></div>
 
-<form id="login-form" method="post">
+<p class="error" id="login-err"></p>
+<p class="error" id="pass-err"></p>
+
+<form id="login-form" method="post" onsubmit="return loginValidate()">
+    <p th:if="${info}" th:text="${info}" class="error"></p>
     <input type="text" placeholder="Login" th:field="*{userModel.login}">
     <input type="password" placeholder="Hasło" th:field="*{userModel.pass}">
     <input type="submit" value="Zaloguj">
