@@ -2,12 +2,10 @@ function registerValidate(){
     var login = document.forms["register-form"]["login"].value;
     var pass = document.forms["register-form"]["pass"].value;
     var pass2 = document.forms["register-form"]["pass2"].value;
-
-    var regex = new RegExp(/[A-Za-z0-9._-]{5}.*/);
     var flag = true;
 
 
-    if(!regex.test(login)){
+    if(!lengthValidate(login)){
         document.getElementById("login").style.backgroundColor = "red";
         document.getElementById("login-err").innerHTML = "Login musi być długości 5 lub więcej.";
         flag = false;
@@ -16,8 +14,7 @@ function registerValidate(){
         document.getElementById("login-err").innerHTML = "";
     }
 
-
-    if(!regex.test(pass)){
+    if(!lengthValidate(pass)){
         document.getElementById("pass").style.backgroundColor = "red";
         document.getElementById("pass-err").innerHTML = "Hasło musi być długości 5 lub więcej.";
         flag = false;
@@ -26,8 +23,7 @@ function registerValidate(){
         document.getElementById("pass-err").innerHTML = "";
     }
 
-
-    if(!regex.test(pass2)){
+    if(!lengthValidate(pass2)){
         document.getElementById("pass2").style.backgroundColor = "red";
         document.getElementById("pass2-err").innerHTML = "Powtórzone Hasło musi być długości 5 lub więcej.";
         flag = false;
@@ -35,7 +31,6 @@ function registerValidate(){
         document.getElementById("pass2").style.backgroundColor = "white";
         document.getElementById("pass2-err").innerHTML = "";
     }
-
 
     if(pass!==pass2){
         document.getElementById("pass").style.backgroundColor = "red";
@@ -57,12 +52,10 @@ function registerValidate(){
 function loginValidate(){
     var login = document.forms["login-form"]["login"].value;
     var pass = document.forms["login-form"]["pass"].value;
-
-    var regex = new RegExp(/[A-Za-z0-9._-]{5}.*/);
     var flag = true;
 
 
-    if(!regex.test(login)){
+    if(!lengthValidate(login)){
         document.getElementById("login").style.backgroundColor = "red";
         document.getElementById("login-err").innerHTML = "Login musi być długości 5 lub więcej.";
         flag = false;
@@ -71,8 +64,7 @@ function loginValidate(){
         document.getElementById("login-err").innerHTML = "";
     }
 
-
-    if(!regex.test(pass)){
+    if(!lengthValidate(pass)){
         document.getElementById("pass").style.backgroundColor = "red";
         document.getElementById("pass-err").innerHTML = "Hasło musi być długości 5 lub więcej.";
         flag = false;
@@ -83,4 +75,10 @@ function loginValidate(){
 
 
     return flag;
+}
+
+function lengthValidate(text){
+    var regex = new RegExp(/[A-Za-z0-9._-]{5}.*/);
+
+    return regex.test(text);
 }

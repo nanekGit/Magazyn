@@ -38,6 +38,15 @@ public class UserController {
 
     @RequestMapping(value = "/login", method = RequestMethod.POST)
     public String loginSubmit(@ModelAttribute User user){
+        Pattern regexp = this.userService.getLengthPattern();
+        Matcher loginMatcher = regexp.matcher(user.getLogin());
+        Matcher passMatcher = regexp.matcher(user.getPass());
+
+        if(!loginMatcher.matches() || !passMatcher.matches())
+        {
+            this.sessionObject.setInfo("Błąd Validacji.");
+            return "redirect:http://localhost:8080/login";
+        }
         this.userService.authenticate(user);
         if(!this.sessionObject.isLogged()){
             this.sessionObject.setInfo("Błędny login lub hasło.");
@@ -69,7 +78,7 @@ public class UserController {
         if(this.sessionObject.isLogged()){
             return "redirect:/main";
         }
-        Pattern regexp = Pattern.compile("[A-Za-z0-9._-]{5}.*");
+        Pattern regexp = this.userService.getLengthPattern();
         Matcher loginMatcher = regexp.matcher(registrationModel.getLogin());
         Matcher passMatcher = regexp.matcher(registrationModel.getPass());
         Matcher pass2Matcher = regexp.matcher(registrationModel.getPass2());

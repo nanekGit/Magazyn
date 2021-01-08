@@ -8,14 +8,23 @@ import pl.edu.wszib.magazyn.model.view.RegistrationModel;
 import pl.edu.wszib.magazyn.services.iUserService;
 import pl.edu.wszib.magazyn.session.SessionObject;
 
+import java.util.regex.Pattern;
+
 @Service
 public class UserServiceImpl implements iUserService {
+
+    private final Pattern lengthPattern = Pattern.compile("[A-Za-z0-9._-]{5}.*");
 
     @Autowired
     iUserDAO userDAO;
 
     @Autowired
     SessionObject sessionObject;
+
+    @Override
+    public Pattern getLengthPattern() {
+        return lengthPattern;
+    }
 
     @Override
     public void authenticate(User user) {

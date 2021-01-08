@@ -20,12 +20,10 @@ function quantityValidate(){
 function quantityAndNameValidate(){
     var quantity = document.forms["product-form"]["quantity"].value;
     var name = document.forms["product-form"]["name"].value;
-
-    var regex = new RegExp(/[\sA-Za-z0-9._-]{5}.*/);
     var flag = true;
 
 
-    if(!regex.test(name)){
+    if(!lengthValidate(name)){
         document.getElementById("name").style.backgroundColor = "red";
         document.getElementById("name-err").innerHTML = "Nazwa musi być długości 5 lub więcej.";
         flag = false;
@@ -49,4 +47,10 @@ function quantityAndNameValidate(){
 
 
     return flag;
+}
+
+function lengthValidate(text){
+    var regex = new RegExp(/[\sA-Za-z0-9._-]{5}.*/);
+
+    return regex.test(text);
 }

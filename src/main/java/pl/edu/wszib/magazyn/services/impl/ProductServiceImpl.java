@@ -9,12 +9,20 @@ import pl.edu.wszib.magazyn.model.view.ProductModel;
 import pl.edu.wszib.magazyn.services.iProductService;
 
 import java.util.List;
+import java.util.regex.Pattern;
 
 @Service
 public class ProductServiceImpl implements iProductService {
 
+    private final Pattern lengthPattern = Pattern.compile("[ A-Za-z0-9._-]{5}.*");
+
     @Autowired
     iProductDAO productDAO;
+
+    @Override
+    public Pattern getLengthPattern() {
+        return lengthPattern;
+    }
 
     @Override
     public List<Product> getAllProducts() {

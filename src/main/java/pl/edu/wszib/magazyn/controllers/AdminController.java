@@ -55,7 +55,7 @@ public class AdminController {
             }
             return "redirect:/main";
         }
-        Pattern regexp = Pattern.compile("[ A-Za-z0-9._-]{5}.*");
+        Pattern regexp = this.productService.getLengthPattern();
         Matcher nameMatcher = regexp.matcher(product.getName());
 
         if(!nameMatcher.matches()) {
@@ -101,7 +101,7 @@ public class AdminController {
         if (sessionObject.getLoggedUser().getRola() != User.Role.ADMIN){
             return "redirect:/main";
         }
-        Pattern regexp = Pattern.compile("[ A-Za-z0-9._-]{5}.*");
+        Pattern regexp = this.productService.getLengthPattern();
         Matcher nameMatcher = regexp.matcher(productModel.getName());
 
         if(!nameMatcher.matches()) {
