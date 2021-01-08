@@ -3,25 +3,25 @@ package pl.edu.wszib.magazyn.model.view;
 //Stworzyłem te klasę jako możliwość rozbudowy systemu, nie wiem czy magazyn coś takiego potrzebuje czy nie
 public class ProductModel {
 
-    private String Name;
-    private int Quantity;
+    private String name;
+    private int quantity;
 
     public ProductModel() {
     }
 
     public String getName() {
-        return Name;
+        return this.name;
     }
 
     public void setName(String name) {
-        Name = name;
+        this.name = name;
     }
 
     public int getQuantity() {
-        return Quantity;
+        return this.quantity;
     }
 
     public void setQuantity(int quantity) {
-        Quantity = quantity;
+        this.quantity = quantity;
     }
 }

@@ -20,8 +20,8 @@
         <div class="product-box">
             <div class="name-box" th:text="${product.name}"></div>
             <div class="quantity-box" th:text="${product.quantity}"></div>
-            <a th:if="${isLogged} and ${role=='ADMIN'}" th:href="@{/edit/{id}(id=${product.ID})}" class="button" id="edit"></a>
-            <a th:if="${isLogged} and ${role=='RESUPPLIER'}" th:href="@{/resupply/{id}(id=${product.ID})}" class="button" id="resupply"></a>
+            <a th:if="${isLogged} and ${role=='ADMIN'}" th:href="@{/edit/{id}(id=${product.id})}" class="button" id="edit"></a>
+            <a th:if="${isLogged} and ${role=='RESUPPLIER'}" th:href="@{/resupply/{id}(id=${product.id})}" class="button" id="resupply"></a>
         </div>
     </th:block>
 </div>

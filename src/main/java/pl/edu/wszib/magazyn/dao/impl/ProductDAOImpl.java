@@ -91,7 +91,7 @@ public class ProductDAOImpl implements iProductDAO {
             String sql = "UPDATE product SET quantity = ? WHERE id = ?;";
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setInt(1, product.getQuantity());
-            preparedStatement.setInt(2, product.getID());
+            preparedStatement.setInt(2, product.getId());
 
             if(preparedStatement.executeUpdate()>0){
                 return true;
@@ -109,7 +109,7 @@ public class ProductDAOImpl implements iProductDAO {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setInt(1, product.getQuantity());
             preparedStatement.setString(2, product.getName());
-            preparedStatement.setInt(3, product.getID());
+            preparedStatement.setInt(3, product.getId());
 
             if(preparedStatement.executeUpdate()>0){
                 return true;

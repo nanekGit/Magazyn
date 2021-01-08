@@ -4,59 +4,50 @@ import java.sql.ResultSet;
 
 public class Product {
 
-    private int ID;
-    private String Name;
-    private int Quantity;
+    private int id;
+    private String name;
+    private int quantity;
 
     private Product() {
     }
 
     public Product(String name, int quantity) {
-        this.ID = 0;
-        this.Name = name;
-        this.Quantity = quantity;
+        this.id = 0;
+        this.name = name;
+        this.quantity = quantity;
     }
 
     public Product(ResultSet resultSet) {
         try {
-            this.ID = resultSet.getInt("id");
-            this.Name = resultSet.getString("name");
-            this.Quantity = resultSet.getInt("quantity");
+            this.id = resultSet.getInt("id");
+            this.name = resultSet.getString("name");
+            this.quantity = resultSet.getInt("quantity");
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    public int getID() {
-        return ID;
+    public int getId() {
+        return id;
     }
 
-    public void setID(int ID) {
-        this.ID = ID;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {
-        return Name;
+        return this.name;
     }
 
     public void setName(String name) {
-        Name = name;
+        this.name = name;
     }
 
     public int getQuantity() {
-        return Quantity;
+        return this.quantity;
     }
 
     public void setQuantity(int quantity) {
-        Quantity = quantity;
-    }
-
-    @Override
-    public String toString() {
-        return "Product{" +
-                "Name='" + this.Name + '\'' +
-                ", ID=" + this.ID +
-                ", Quantity=" + this.Quantity +
-                '}';
+        this.quantity = quantity;
     }
 }

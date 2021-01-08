@@ -10,7 +10,7 @@ public class RegistrationModel {
     }
 
     public String getLogin() {
-        return login;
+        return this.login;
     }
 
     public void setLogin(String login) {
@@ -18,7 +18,7 @@ public class RegistrationModel {
     }
 
     public String getPass() {
-        return pass;
+        return this.pass;
     }
 
     public void setPass(String pass) {
@@ -26,7 +26,7 @@ public class RegistrationModel {
     }
 
     public String getPass2() {
-        return pass2;
+        return this.pass2;
     }
 
     public void setPass2(String pass2) {

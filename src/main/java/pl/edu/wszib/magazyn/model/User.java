@@ -31,7 +31,7 @@ public class User {
     }
 
     public int getId() {
-        return id;
+        return this.id;
     }
 
     public void setId(int id) {
@@ -39,7 +39,7 @@ public class User {
     }
 
     public String getLogin() {
-        return login;
+        return this.login;
     }
 
     public void setLogin(String login) {
@@ -47,7 +47,7 @@ public class User {
     }
 
     public String getPass() {
-        return pass;
+        return this.pass;
     }
 
     public void setPass(String pass) {
@@ -55,7 +55,7 @@ public class User {
     }
 
     public Role getRola() {
-        return rola;
+        return this.rola;
     }
 
     public void setRola(User.Role rola) {

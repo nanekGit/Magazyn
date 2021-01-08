@@ -56,8 +56,8 @@ public class ResupplierController {
             this.sessionObject.setInfo("Ilość Sztuk nie może być ujemna. Wpisałeś "+product.getQuantity());
             return "redirect:http://localhost:8080/resupply/"+id;
         }
-        if(product.getID()==0) {
-            product.setID(id);
+        if(product.getId()==0) {
+            product.setId(id);
         }
         if(!this.productService.resupplyProduct(product)){
             this.sessionObject.setInfo("Wystąpił błąd podczas aktualizacji bazy danych");

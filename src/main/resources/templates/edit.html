@@ -19,7 +19,7 @@
 <div id="content">
     <form id="product-form" method="post" onsubmit="return quantityAndNameValidate()">
         <p th:if="${info}" th:text="${info}" class="error"></p>
-        <input type="text" th:field="*{product.ID}" readonly>
+        <input type="text" th:field="*{product.id}" readonly>
         <input id="name" type="text" th:field="*{product.name}">
         <input id="quantity" type="number" th:field="*{product.quantity}">
         <input type="submit">
