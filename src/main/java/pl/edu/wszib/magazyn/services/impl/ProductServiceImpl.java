@@ -4,7 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import pl.edu.wszib.magazyn.dao.iProductDAO;
 import pl.edu.wszib.magazyn.model.Product;
-import pl.edu.wszib.magazyn.model.User;
 import pl.edu.wszib.magazyn.model.view.ProductModel;
 import pl.edu.wszib.magazyn.services.iProductService;
 
@@ -43,10 +42,10 @@ public class ProductServiceImpl implements iProductService {
 
     @Override
     public int editProduct(Product product) {
-        if(this.productDAO.getProductByName(product.getName()) != null){
+        Product productFromDB = this.productDAO.getProductByID(product.getId());
+        if(!product.getName().equals(productFromDB.getName()) && this.productDAO.getProductByName(product.getName()) != null){
             return 1;
         }
-        Product productFromDB = this.productDAO.getProductByID(product.getId());
         productFromDB.setQuantity(product.getQuantity());
         productFromDB.setName(product.getName());
         if(this.productDAO.editProduct(productFromDB)){
