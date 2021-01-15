@@ -31,15 +31,15 @@ public class AdminController {
         if (!sessionObject.isLogged()){
             return "redirect:http://localhost:8080/login";
         }
-        if (sessionObject.getLoggedUser().getRola() != User.Role.ADMIN){
-            if (sessionObject.getLoggedUser().getRola() == User.Role.RESUPPLIER){
+        if (sessionObject.getLoggedUser().getRole() != User.Role.ADMIN){
+            if (sessionObject.getLoggedUser().getRole() == User.Role.RESUPPLIER){
                 return "redirect:/resupply/"+id;
             }
             return "redirect:/main";
         }
         model.addAttribute("product", this.productService.getProductByID(id));
         model.addAttribute("isLogged", this.sessionObject.isLogged());
-        model.addAttribute("role", this.sessionObject.getLoggedUser().getRola().toString());
+        model.addAttribute("role", this.sessionObject.getLoggedUser().getRole().toString());
         model.addAttribute("info", this.sessionObject.getInfo());
         return "edit";
     }
@@ -49,8 +49,8 @@ public class AdminController {
         if (!sessionObject.isLogged()){
             return "redirect:http://localhost:8080/login";
         }
-        if (sessionObject.getLoggedUser().getRola() != User.Role.ADMIN){
-            if (sessionObject.getLoggedUser().getRola() == User.Role.RESUPPLIER){
+        if (sessionObject.getLoggedUser().getRole() != User.Role.ADMIN){
+            if (sessionObject.getLoggedUser().getRole() == User.Role.RESUPPLIER){
                 return "redirect:/resupply/"+id;
             }
             return "redirect:/main";
@@ -83,12 +83,12 @@ public class AdminController {
         if (!sessionObject.isLogged()){
             return "redirect:http://localhost:8080/login";
         }
-        if (sessionObject.getLoggedUser().getRola() != User.Role.ADMIN){
+        if (sessionObject.getLoggedUser().getRole() != User.Role.ADMIN){
             return "redirect:/main";
         }
         model.addAttribute("productModel", new ProductModel());
         model.addAttribute("isLogged", this.sessionObject.isLogged());
-        model.addAttribute("role", this.sessionObject.getLoggedUser().getRola().toString());
+        model.addAttribute("role", this.sessionObject.getLoggedUser().getRole().toString());
         model.addAttribute("info", this.sessionObject.getInfo());
         return "add";
     }
@@ -98,7 +98,7 @@ public class AdminController {
         if (!sessionObject.isLogged()){
             return "redirect:http://localhost:8080/login";
         }
-        if (sessionObject.getLoggedUser().getRola() != User.Role.ADMIN){
+        if (sessionObject.getLoggedUser().getRole() != User.Role.ADMIN){
             return "redirect:/main";
         }
         Pattern regexp = this.productService.getLengthPattern();

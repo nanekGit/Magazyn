@@ -14,8 +14,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fd24d6f8-8142-483c-930b-25837a45b122" name="Default Changelist" comment="Zadanie 2&#10;Front End i MYSQL">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/magazyn.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/05096aa7-0a0e-48df-8e34-f822f66abe52.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/05096aa7-0a0e-48df-8e34-f822f66abe52.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/magazyn/services/impl/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/magazyn/services/impl/ProductServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/magazyn/configuration/AppConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/magazyn/configuration/AppConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/magazyn/controllers/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/magazyn/controllers/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/magazyn/controllers/CommonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/magazyn/controllers/CommonController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/magazyn/controllers/ResupplierController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/magazyn/controllers/ResupplierController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/magazyn/dao/impl/UserDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/magazyn/dao/impl/UserDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/magazyn/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/magazyn/model/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,14 +54,17 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/static" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/magazyn.json" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Confirmation" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\User\IdeaProjects\Magazyn\src\main\resources" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="pl.edu.wszib.magazyn.model.view" />
       <recent name="pl.edu.wszib.magazyn.model" />
@@ -71,6 +81,17 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -120,7 +141,10 @@
       <workItem from="1610102373660" duration="1308000" />
       <workItem from="1610116739906" duration="1284000" />
       <workItem from="1610632735163" duration="1419000" />
-      <workItem from="1610655338991" duration="455000" />
+      <workItem from="1610655338991" duration="1564000" />
+      <workItem from="1610704683883" duration="19000" />
+      <workItem from="1610705243563" duration="27000" />
+      <workItem from="1610707501354" duration="1265000" />
     </task>
     <task id="LOCAL-00001" summary="Pierwszy commit">
       <created>1605188843246</created>
@@ -199,7 +223,21 @@
       <option name="project" value="LOCAL" />
       <updated>1610117908160</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Zadanie 2&#10;Front End i MYSQL">
+      <created>1610655887118</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1610655887118</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Zadanie 2&#10;Front End i MYSQL">
+      <created>1610656047962</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1610656047962</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

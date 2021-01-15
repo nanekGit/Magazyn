@@ -7,7 +7,7 @@ public class User {
     private int id;
     private String login;
     private String pass;
-    private User.Role rola;
+    private User.Role role;
 
     public User() {
     }
@@ -16,7 +16,7 @@ public class User {
         this.id = 0;
         this.login = login;
         this.pass = pass;
-        this.rola = rola;
+        this.role = rola;
     }
 
     public User(ResultSet resultSet) {
@@ -24,7 +24,7 @@ public class User {
             this.id = resultSet.getInt("id");
             this.login = resultSet.getString("login");
             this.pass = resultSet.getString("pass");
-            this.rola = User.Role.valueOf(resultSet.getString("rola"));
+            this.role = User.Role.valueOf(resultSet.getString("role"));
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -54,12 +54,12 @@ public class User {
         this.pass = pass;
     }
 
-    public Role getRola() {
-        return this.rola;
+    public Role getRole() {
+        return this.role;
     }
 
-    public void setRola(User.Role rola) {
-        this.rola = rola;
+    public void setRole(User.Role role) {
+        this.role = role;
     }
 
     public enum Role {

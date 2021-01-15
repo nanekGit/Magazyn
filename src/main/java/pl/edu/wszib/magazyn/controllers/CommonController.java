@@ -28,7 +28,7 @@ public class CommonController {
         model.addAttribute("products", this.productService.getAllProducts());
         model.addAttribute("isLogged", this.sessionObject.isLogged());
         if(this.sessionObject.isLogged()) {
-            model.addAttribute("role", this.sessionObject.getLoggedUser().getRola().toString());
+            model.addAttribute("role", this.sessionObject.getLoggedUser().getRole().toString());
         }else{
             model.addAttribute("role", null);
         }
@@ -39,7 +39,7 @@ public class CommonController {
     public String kontakt(Model model){
         model.addAttribute("isLogged", this.sessionObject.isLogged());
         if(this.sessionObject.isLogged()) {
-            model.addAttribute("role", this.sessionObject.getLoggedUser().getRola().toString());
+            model.addAttribute("role", this.sessionObject.getLoggedUser().getRole().toString());
         }else{
             model.addAttribute("role", null);
         }

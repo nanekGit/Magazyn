@@ -35,11 +35,11 @@ public class UserDAOImpl implements iUserDAO {
     @Override
     public boolean persistUser(User user) {
         try{
-            String sql = "INSERT INTO user (login, pass, rola) VALUES (?, ?, ?);";
+            String sql = "INSERT INTO user (login, pass, role) VALUES (?, ?, ?);";
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setString(1, user.getLogin());
             preparedStatement.setString(2, user.getPass());
-            preparedStatement.setString(3, user.getRola().toString());
+            preparedStatement.setString(3, user.getRole().toString());
 
             if(preparedStatement.executeUpdate()>0){
                 return true;
