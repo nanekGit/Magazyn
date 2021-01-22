@@ -36,8 +36,11 @@ public class ProductServiceImpl implements iProductService {
     @Override
     public boolean resupplyProduct(Product product) {
         Product productFromDB = this.productDAO.getProductByID(product.getId());
+        if(!product.getName().equals(productFromDB.getName())){
+            return false;
+        }
         productFromDB.setQuantity(product.getQuantity());
-        return this.productDAO.resupplyProduct(productFromDB);
+        return this.productDAO.updateProduct(productFromDB);
     }
 
     @Override
@@ -48,7 +51,7 @@ public class ProductServiceImpl implements iProductService {
         }
         productFromDB.setQuantity(product.getQuantity());
         productFromDB.setName(product.getName());
-        if(this.productDAO.editProduct(productFromDB)){
+        if(this.productDAO.updateProduct(productFromDB)){
             return 0;
         }
         return 2;

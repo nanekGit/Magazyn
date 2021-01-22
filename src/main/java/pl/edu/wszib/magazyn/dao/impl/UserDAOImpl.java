@@ -1,51 +1,49 @@
 package pl.edu.wszib.magazyn.dao.impl;
 
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import pl.edu.wszib.magazyn.dao.iUserDAO;
 import pl.edu.wszib.magazyn.model.User;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-
 @Repository
 public class UserDAOImpl implements iUserDAO {
 
     @Autowired
-    Connection connection;
+    SessionFactory sessionFactory;
 
     @Override
     public User getUserByLogin(String login) {
+        Session session = this.sessionFactory.openSession();
+        Query<User> query = session.createQuery("FROM pl.edu.wszib.magazyn.model.User WHERE login = :login");
+        query.setParameter("login", login);
+        User result = null;
         try{
-            String sql = "SELECT * FROM user WHERE login = ?;";
-            PreparedStatement preparedStatement = connection.prepareStatement(sql);
-            preparedStatement.setString(1, login);
-
-            ResultSet resultSet = preparedStatement.executeQuery();
-            if(resultSet.next()){
-                return new User(resultSet);
-            }
-        }catch (Exception e){
-            e.printStackTrace();
-        }
-        return null;
+            result = query.getSingleResult();
+        }catch (Exception e){}
+        session.close();
+        return result;
     }
 
     @Override
     public boolean persistUser(User user) {
+        Session session = this.sessionFactory.openSession();
+        Transaction tx = null;
         try{
-            String sql = "INSERT INTO user (login, pass, role) VALUES (?, ?, ?);";
-            PreparedStatement preparedStatement = connection.prepareStatement(sql);
-            preparedStatement.setString(1, user.getLogin());
-            preparedStatement.setString(2, user.getPass());
-            preparedStatement.setString(3, user.getRole().toString());
-
-            if(preparedStatement.executeUpdate()>0){
-                return true;
-            }
-        }catch (Exception e){
+            tx = session.beginTransaction();
+            session.save(user);
+            tx.commit();
+            return true;
+        } catch (Exception e) {
             e.printStackTrace();
+            if (tx != null) {
+                tx.rollback();
+            }
+        } finally {
+            session.close();
         }
         return false;
     }

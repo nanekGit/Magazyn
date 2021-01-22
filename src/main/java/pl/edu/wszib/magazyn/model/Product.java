@@ -1,14 +1,18 @@
 package pl.edu.wszib.magazyn.model;
 
+import javax.persistence.*;
 import java.sql.ResultSet;
 
+@Entity(name = "product")
 public class Product {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String name;
     private int quantity;
 
-    private Product() {
+    public Product() {
     }
 
     public Product(String name, int quantity) {

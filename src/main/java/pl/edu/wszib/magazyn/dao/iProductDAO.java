@@ -10,6 +10,5 @@ public interface iProductDAO {
     Product getProductByID(int id);
     Product getProductByName(String name);
     boolean persistProduct(Product product);
-    boolean resupplyProduct(Product product);
-    boolean editProduct(Product product);
+    boolean updateProduct(Product product);
 }

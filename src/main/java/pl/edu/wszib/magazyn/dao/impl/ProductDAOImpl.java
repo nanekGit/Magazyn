@@ -1,121 +1,93 @@
 package pl.edu.wszib.magazyn.dao.impl;
 
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import pl.edu.wszib.magazyn.dao.iProductDAO;
 import pl.edu.wszib.magazyn.model.Product;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.util.ArrayList;
 import java.util.List;
 
 @Repository
 public class ProductDAOImpl implements iProductDAO {
 
     @Autowired
-    Connection connection;
+    SessionFactory sessionFactory;
 
     @Override
     public List<Product> getAllProducts() {
-        List<Product> products = new ArrayList<>();
-        try{
-            String sql = "SELECT * FROM product;";
-            PreparedStatement preparedStatement = connection.prepareStatement(sql);
-
-            ResultSet resultSet = preparedStatement.executeQuery();
-            while(resultSet.next()){
-                products.add(new Product(resultSet));
-            }
-        }catch (Exception e){
-            e.printStackTrace();
-        }
+        Session session = this.sessionFactory.openSession();
+        Query<Product> query = session.createQuery("FROM pl.edu.wszib.magazyn.model.Product");
+        List<Product> products = query.getResultList();
+        session.close();
         return products;
     }
 
     @Override
     public Product getProductByID(int id) {
+        Session session = this.sessionFactory.openSession();
+        Query<Product> query = session.createQuery("FROM pl.edu.wszib.magazyn.model.Product WHERE id = :id");
+        query.setParameter("id", id);
+        Product result = null;
         try{
-            String sql = "SELECT * FROM product WHERE id = ?;";
-            PreparedStatement preparedStatement = connection.prepareStatement(sql);
-            preparedStatement.setInt(1, id);
-
-            ResultSet resultSet = preparedStatement.executeQuery();
-            if(resultSet.next()){
-                return new Product(resultSet);
-            }
-        }catch (Exception e){
-            e.printStackTrace();
-        }
-        return null;
+            result = query.getSingleResult();
+        }catch (Exception e){}
+        session.close();
+        return result;
     }
 
     @Override
     public Product getProductByName(String name) {
+        Session session = this.sessionFactory.openSession();
+        Query<Product> query = session.createQuery("FROM pl.edu.wszib.magazyn.model.Product WHERE name = :name");
+        query.setParameter("name", name);
+        Product result = null;
         try{
-            String sql = "SELECT * FROM product WHERE name = ?;";
-            PreparedStatement preparedStatement = connection.prepareStatement(sql);
-            preparedStatement.setString(1, name);
-
-            ResultSet resultSet = preparedStatement.executeQuery();
-            if(resultSet.next()){
-                return new Product(resultSet);
-            }
-        }catch (Exception e){
-            e.printStackTrace();
-        }
-        return null;
+            result = query.getSingleResult();
+        }catch (Exception e){}
+        session.close();
+        return result;
     }
 
     @Override
     public boolean persistProduct(Product product) {
+        Session session = this.sessionFactory.openSession();
+        Transaction tx = null;
         try{
-            String sql = "INSERT INTO product (name, quantity) VALUES (?, ?);";
-            PreparedStatement preparedStatement = connection.prepareStatement(sql);
-            preparedStatement.setString(1, product.getName());
-            preparedStatement.setInt(2, product.getQuantity());
-
-            if(preparedStatement.executeUpdate()>0){
-                return true;
-            }
-        }catch (Exception e){
+            tx = session.beginTransaction();
+            session.save(product);
+            tx.commit();
+            return true;
+        } catch (Exception e) {
             e.printStackTrace();
+            if (tx != null) {
+                tx.rollback();
+            }
+        } finally {
+            session.close();
         }
         return false;
     }
 
     @Override
-    public boolean resupplyProduct(Product product) {
+    public boolean updateProduct(Product product) {
+        Session session = this.sessionFactory.openSession();
+        Transaction tx = null;
         try{
-            String sql = "UPDATE product SET quantity = ? WHERE id = ?;";
-            PreparedStatement preparedStatement = connection.prepareStatement(sql);
-            preparedStatement.setInt(1, product.getQuantity());
-            preparedStatement.setInt(2, product.getId());
-
-            if(preparedStatement.executeUpdate()>0){
-                return true;
-            }
+            tx = session.beginTransaction();
+            session.update(product);
+            tx.commit();
+            return true;
         }catch (Exception e){
             e.printStackTrace();
-        }
-        return false;
-    }
-
-    @Override
-    public boolean editProduct(Product product) {
-        try{
-            String sql = "UPDATE product SET quantity = ?, name = ? WHERE id = ?;";
-            PreparedStatement preparedStatement = connection.prepareStatement(sql);
-            preparedStatement.setInt(1, product.getQuantity());
-            preparedStatement.setString(2, product.getName());
-            preparedStatement.setInt(3, product.getId());
-
-            if(preparedStatement.executeUpdate()>0){
-                return true;
+            if(tx != null){
+                tx.rollback();
             }
-        }catch (Exception e){
-            e.printStackTrace();
+        }finally {
+            session.close();
         }
         return false;
     }
