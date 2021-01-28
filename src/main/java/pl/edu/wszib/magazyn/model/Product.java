@@ -52,6 +52,6 @@ public class Product {
     }
 
     public void setQuantity(int quantity) {
-        this.quantity = quantity;
+        this.quantity = Math.max(quantity, 0);
     }
 }

@@ -15,6 +15,11 @@
   <component name="ChangeListManager">
     <list default="true" id="fd24d6f8-8142-483c-930b-25837a45b122" name="Default Changelist" comment="Zadanie 4&#10;Hibernate">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Magazyn.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Magazyn.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/magazyn/dao/impl/ProductDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/magazyn/dao/impl/ProductDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/magazyn/dao/impl/UserDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/magazyn/dao/impl/UserDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/magazyn/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/magazyn/model/Product.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,6 +135,14 @@
       <workItem from="1611308589824" duration="128000" />
       <workItem from="1611308729072" duration="325000" />
       <workItem from="1611309064464" duration="126000" />
+      <workItem from="1611309329917" duration="65000" />
+      <workItem from="1611310282509" duration="11000" />
+      <workItem from="1611310333109" duration="13000" />
+      <workItem from="1611313485520" duration="287000" />
+      <workItem from="1611313902263" duration="58000" />
+      <workItem from="1611317966667" duration="338000" />
+      <workItem from="1611848308947" duration="44000" />
+      <workItem from="1611849327646" duration="663000" />
     </task>
     <task id="LOCAL-00001" summary="Pierwszy commit">
       <created>1605188843246</created>
@@ -236,7 +249,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611308977808</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Zadanie 4&#10;Hibernate">
+      <created>1611309383015</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1611309383015</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

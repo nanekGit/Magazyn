@@ -9,6 +9,7 @@ import org.springframework.stereotype.Repository;
 import pl.edu.wszib.magazyn.dao.iProductDAO;
 import pl.edu.wszib.magazyn.model.Product;
 
+import javax.persistence.NoResultException;
 import java.util.List;
 
 @Repository
@@ -34,7 +35,7 @@ public class ProductDAOImpl implements iProductDAO {
         Product result = null;
         try{
             result = query.getSingleResult();
-        }catch (Exception e){}
+        }catch (NoResultException e){}
         session.close();
         return result;
     }
@@ -47,7 +48,7 @@ public class ProductDAOImpl implements iProductDAO {
         Product result = null;
         try{
             result = query.getSingleResult();
-        }catch (Exception e){}
+        }catch (NoResultException e){}
         session.close();
         return result;
     }

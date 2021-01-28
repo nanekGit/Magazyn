@@ -9,6 +9,8 @@ import org.springframework.stereotype.Repository;
 import pl.edu.wszib.magazyn.dao.iUserDAO;
 import pl.edu.wszib.magazyn.model.User;
 
+import javax.persistence.NoResultException;
+
 @Repository
 public class UserDAOImpl implements iUserDAO {
 
@@ -23,7 +25,7 @@ public class UserDAOImpl implements iUserDAO {
         User result = null;
         try{
             result = query.getSingleResult();
-        }catch (Exception e){}
+        }catch (NoResultException e){}
         session.close();
         return result;
     }
